@@ -1,0 +1,275 @@
+/* Magazine styles */
+.fb3d-modal-shadow {
+  overflow: hidden;
+}
+
+.fb3d-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,.5);
+  z-index: 500001;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s step-end;
+}
+.fb3d-modal.visible {
+  pointer-events: all;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.fb3d-modal .mount-container {
+  position: absolute;
+  z-index: 1;
+}
+.fb3d-modal.dark .mount-container, .fb3d-modal.light .mount-container {
+  width: 95%;
+  height: 95%;
+  left: calc(5% / 2);
+  top: calc(5% / 2);
+  box-shadow: 0 0 5px rgba(255,255,255,.5);
+}
+.fb3d-modal.dark-shadow .mount-container, .fb3d-modal.light-shadow .mount-container {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.fb3d-modal.dark .mount-container, .fb3d-modal.dark-shadow .mount-container {
+  background-color: rgba(0,0,0,.5);
+}
+.fb3d-modal.light .mount-container, .fb3d-modal.light-shadow .mount-container {
+  background-color: rgba(255,255,255,.5);
+}
+.light .mount-container.fullscreen, .light-shadow .mount-container.fullscreen {
+  background-image: url('../images/inverse-texture.jpg');
+}
+.dark .mount-container.fullscreen, .dark-shadow .mount-container.fullscreen {
+  background-image: url('../images/texture.jpg');
+}
+
+.fb3d-modal .cmd-close {
+  font-size: 24px;
+  color: #ccc;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  z-index: 2;
+  cursor: pointer;
+  transition: color .15s ease-in;
+}
+.fb3d-modal.dark .cmd-close, .fb3d-modal.light .cmd-close {
+  right: calc(5% / 2 + 10px);
+  top: calc(5% / 2 + 8px);
+}
+.fb3d-modal.light .cmd-close, .fb3d-modal.light-shadow .cmd-close {
+  color: #555;
+}
+.fb3d-modal .cmd-close:hover {
+  color: #eee;
+  transition: color .15s ease-out;
+}
+.fb3d-modal.light .cmd-close:hover, .fb3d-modal.light-shadow .cmd-close:hover {
+  color: #111;
+}
+.fb3d-modal .cmd-close:active {
+  font-size: 22px;
+  padding-top: 1px;
+  padding-right: 1px;
+}
+
+.border {
+  border: 1px solid #dee2e6 !important;
+}
+
+.rounded {
+  border-radius: 0.25rem !important;
+}
+
+.view-modes .rw {
+  margin-bottom: 15px;
+}
+.view-modes .lcl, .view-modes .rcl {
+  display: inline-block;
+  margin-bottom: 10px;
+  vertical-align: top;
+}
+@media(min-width: 600px) {
+  .view-modes .lcl {
+    width: 170px;
+  }
+  .view-modes .rcl {
+    width: calc(100% - 176px);
+  }
+}
+.view-modes .row {
+  margin-bottom: 25px;
+}
+
+.view-modes .row:last-child {
+  margin-bottom: 10px;
+}
+
+.welcome-img {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.welcome-img img {
+  max-width: 100%;
+}
+
+.inline-icon {
+  height: 25px;
+}
+
+.fb3d-button {
+  display: inline-block;
+  font-size: 13px;
+  margin: 0;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  white-space: nowrap;
+  box-sizing: border-box;
+
+  min-height: 32px;
+  line-height: 2.30769231;
+  padding: 0 12px;
+
+  color: #fff;
+  background: #007cba;
+  border-color: #007cba;
+
+  text-decoration: none;
+  text-shadow: none;
+}
+
+a.fb3d-button, a.fb3d-button:visited {
+  color: #fff;
+}
+
+.fb3d-button:focus,
+.fb3d-button:hover {
+	background: #0071a1;
+	border-color: #0071a1;
+	color: #fff;
+  text-decoration: none;
+
+}
+
+.fb3d-button:focus {
+	box-shadow: 0 0 0 1px #fff, 0 0 0 3px #007cba
+}
+
+.fb3d-button:active {
+	background: #00669b;
+	border-color: #00669b;
+	box-shadow: none;
+	color: #fff
+}
+
+.fb3d-thumbnail {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+
+.fb3d-thumbnail .book-thumbnail {
+  display: inline-block;
+  transition: box-shadow .25s ease-in-out;
+}
+
+.fb3d-thumbnail .book-thumbnail>span {
+  -webkit-transform-style: flat;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  perspective: 1200px;
+  display: inline-block;
+}
+
+.fb3d-thumbnail:hover .book-thumbnail {
+  box-shadow: 0 0 7px rgba(0,0,0,0.2);
+}
+
+.fb3d-thumbnail:active .book-thumbnail {
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  transition: box-shadow .15s ease-in-out;
+}
+
+.fb3d-thumbnail .book-thumbnail img {
+  border-radius: 0;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  transition: transform .25s;
+  cursor: pointer;
+  /* height: 300px; */
+}
+
+.fb3d-thumbnail:hover .book-thumbnail img {
+  transform: rotateY(-20deg) rotateZ(0deg);
+}
+.fb3d-thumbnail:active .book-thumbnail img {
+  transform: rotateY(-17deg) rotateZ(0deg);
+  transition: transform .15s;
+}
+
+.fb3d-thumbnail.deg17:hover .book-thumbnail img {
+  transform: rotateY(-17deg) rotateZ(0deg);
+}
+.fb3d-thumbnail.deg17:active .book-thumbnail img {
+  transform: rotateY(-14deg) rotateZ(0deg);
+}
+
+.fb3d-thumbnail.deg9:hover .book-thumbnail img {
+  transform: rotateY(-9deg) rotateZ(0deg);
+}
+.fb3d-thumbnail.deg9:active .book-thumbnail img {
+  transform: rotateY(-6deg) rotateZ(0deg);
+}
+
+.fb3d-thumbnail .book-heading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.fb3d-thumbnail .book-heading h3 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 120%;
+  color: #fff;
+  text-decoration: none;
+  z-index: 1;
+  background: rgba(60, 60, 60, 0.8);
+  bottom: -100%;
+  transition: bottom .3s ease .2s;
+}
+
+.fb3d-thumbnail:hover .book-heading h3 {
+  bottom: 10px;
+  transition-delay: 0s;
+}
+
+.fb3d-thumbnail .book-heading h3 span {
+  color: #fff;
+  text-decoration: none;
+}
+
+.fb3d-thumbnail.fb3d-fix-title .book-heading h3 {
+    bottom: 10px;
+}

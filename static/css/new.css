@@ -1,0 +1,24 @@
+.bg2 {
+  background-color: #021235;
+}
+.profile-grad{
+  background-image: linear-gradient(to right, #031D54 50%,#0EA98E);
+  height: 350px;position: relative;
+  top:40px;border-bottom-right-radius: 50%;
+}
+.profile-grad::before {
+  content: "";
+  background: url('../../static/image/about-us.jpg');
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;   
+  background-size: cover;
+  border-bottom-right-radius: 50%;
+}
+.profile-pix{width:150px;height: 150px;overflow: hidden;cursor: pointer;}
+.layer{background: transparent;position:relative;z-index:1000;}
+

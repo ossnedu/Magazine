@@ -1,0 +1,52 @@
+.story-txt{color:rgb(114, 113, 113);}
+.small-txt{font-size:12px;}
+.bn-size{font-size: 3em;}
+.tp-bg{background:url('../../static/image/dot.png') no-repeat top right;}
+.display-grad{
+  background-image: linear-gradient(to right, #031D54 50%,#0EA98E);
+  height: 100px;}
+.display-grad{
+  background-image: linear-gradient(to right, #031D54 50%,#0EA98E);
+  height: 100px;}
+.comp-grad{
+    background-image: linear-gradient(to right, #031D54 50%,#0EA98E);
+    height: 350px;position: relative;}
+.comp-grad::before {
+  content: "";
+  background: url('../../static/image/about-us.jpg');
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;   
+  background-size: cover;
+}
+.comp-top{margin-top:20% !important;}.main-pix{color:black;}.main-pix img{width:100%;}
+.main-pix:hover{
+  background-color:#031D54;
+  color:white !important;
+  transition: all 2s;
+}
+.img-ht{height:200px;overflow:hidden;}
+/* .story-grad{
+  background-image: linear-gradient(to right, #031D54 50%,#0EA98E);
+  position: relative;} */
+.hd-title {
+  background: rgba(0, 0, 0, 0.7);
+}
+.detail-ht {
+  height: 50px;
+  overflow: hidden;
+  line-height: 25px;
+}
+.col-12.ft-size.detail-ht.active {
+  height: auto;
+}
+@media screen and (min-width: 768px){
+  .bn-size{font-size: 3.6em;}
+  .comp-top{margin-top:7% !important;}
+  .comp-grad{
+    height: 500px;}
+}
